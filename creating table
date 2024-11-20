@@ -1,0 +1,5 @@
+create table EMPLOYEE(ssn varchar(3) PRIMARY KEY, Name varchar(20) NOT NULL, DOB Date, HiredDate Date, gender char(1), Dno varchar(3) REFERENCES Department (Dnum), CIty varchar (40) DEFAULT 'Bangalore');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    create table DEPARTMENT( NAME char(10),Dnum varchar(6) PRIMARY KEY, Number_of_employees int(1000) NOT NULL, ManagerID INT CHECK (ManagerID > 0), DepartmentID INT DEFAULT 200,EstablishedDate varchar(20), Budget FLOAT (21));
+INSERT INTO DEPARTMENT (Number_of_employees,EstablishedDate, Budget)
+VALUES ( 32,'2010-01-15', 150000.50);
