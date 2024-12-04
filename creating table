@@ -3,3 +3,11 @@ create table EMPLOYEE(ssn varchar(3) PRIMARY KEY, Name varchar(20) NOT NULL, DOB
     create table DEPARTMENT( NAME char(10),Dnum varchar(6) PRIMARY KEY, Number_of_employees int(1000) NOT NULL, ManagerID INT CHECK (ManagerID > 0), DepartmentID INT DEFAULT 200,EstablishedDate varchar(20), Budget FLOAT (21));
 INSERT INTO DEPARTMENT (Number_of_employees,EstablishedDate, Budget)
 VALUES ( 32,'2010-01-15', 150000.50);
+
+
+
+how to print certain names only=
+SELECT Sname FROM SAILORS, RESERVES,BOATS where SAILORS.sid = RESERVES.sid and BOATS.bid = RESERVES.bid; 
+
+insert into reserves (sid, bid, day)
+Values ('S4','A14', 'monday');
