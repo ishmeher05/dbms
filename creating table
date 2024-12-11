@@ -11,3 +11,10 @@ SELECT Sname FROM SAILORS, RESERVES,BOATS where SAILORS.sid = RESERVES.sid and B
 
 insert into reserves (sid, bid, day)
 Values ('S4','A14', 'monday');
+
+
+select emp_id from CERTIFIED,AIRCRAFT
+where certified.aid=NULL
+
+select Aname from AIRCRAFT,CERTIFIED, EMPLOYEE
+where aircraft.aid=certified.aid and certified.emp_id=employee.emp_id and employee.salary > 600000
