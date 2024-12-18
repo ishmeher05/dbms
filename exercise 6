@@ -1,0 +1,25 @@
+/*create table employee (fname varchar(20), lname varchar(20),  addrs varchar (25), sex varchar (1), salary int, Superssn varchar (10),ssn varchar(10), Dno varchar (10), PRIMARY KEY (ssn, Dno ) )*/
+/*create table department (Dname varchar(10) PRIMARY KEY , Dnum varchar(10) REFERENCES employee (Dno), mgrssn, mgrStartdate)*/
+/*create table dependent (Dname varchar(10) REFERENCES department (Dname), essn varchar (10) REFERENCES employee (ssn))*/
+
+/*insert into employee(fname,lname,addrs,sex,salary,Superssn,ssn,Dno)
+VALUES
+('stefan','salvatore','mystic falls', 'M',50000, 'A12', 401, 10),('mark','jacob','oak street', 'M',60000, 'A13', 402, 20),('damon','salvatore','mystic falls', 'M',51000, 'A13', 403, 30),('jenna','gilbert','new orleans', 'F',80000, 'A14', 404, 40),('lexi','duke','oak street 2', 'F',86000, 'A15', 405, 50);*/
+insert into department(Dname,Dnum,mgrssn,mgrStartdate)
+VALUES
+('tech dept', 10, 123, '01-04-2022'),('finance', 20, 124, '04-06-2022'),('tech & IT', 30, 125, '07-03-2022'),('Hr', 40, 126, '15-10-2022'),('marketing', 50, 127, '13-09-2023');
+insert into dependent (Dname, essn)
+VALUES 
+('tech dept',401),('finance',402),('tech & IT', 403),('Hr',404),('marketing', 405);
+
+/*select D.Dname, AVG (E.salary) as Avg_sal
+from department D
+join employee E on D.Dnum= E.Dno
+group by D.Dname;*/
+
+
+/*select distinct E.Fname, E.lname
+from employee E
+join department D on E.ssn= D.mgrssn 
+join dependent */
+
