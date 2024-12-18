@@ -1,0 +1,36 @@
+/*create table aircraft(aid varchar(10) PRIMARY KEY , aname varchar (20), cruising_range int)*/
+/*create table employee (emp_id varchar(10) PRIMARY KEY , ename varchar (20), salary int)*/
+/*create table certified ( emp_id varchar(10) REFERENCES employee (emp_id), aid varchar (10) REFERENCES aircraft (aid) )*/
+/*insert into employee ( emp_id, ename, cruising_range)
+VALUES 
+(101,'boeing 01', 1500),(102,'boeing 02', 2800),(NULL,'boeing 03', 3400),(104,'beoing 04', 4000), (105,'boeing 05', 3700);
+
+
+insert into employee ( emp_id, ename, salary)
+VALUES 
+(01,'garry', 50000),(02,'bob', 80000),(03,'damon', 70000),(04,'carl', 85000), (05,'jeremy', 64000);*/
+
+/*insert into certified ( emp_id, aid)
+VALUES 
+(01,101),(02,102),(03,NULL),(04,104),(05,105);*/
+
+/*select distinct E.ename
+from employee as E
+join certified C on E.emp_id=C.emp_id
+join aircraft A on C.aid= A.aid
+where A.aname like 'boeing%';*/
+
+/*update aircraft
+set aname= 'airbus 05'
+where aid= 105*/
+
+/*select aid, aname ,cruising_range
+from aircraft 
+order by cruising_range ASC;*/
+
+/*select E.ename
+from employee E
+join certified C on E.emp_id = c.emp_id
+join aircraft A on C.aid=A.aid
+where A.cruising_range>3000
+and A.aname Not like 'boeing%';*/
